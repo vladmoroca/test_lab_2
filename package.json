@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/vladmoroca/test_lab_2/issues"
   },
-  "homepage": "https://github.com/vladmoroca/test_lab_2#readme"
+  "homepage": "https://github.com/vladmoroca/test_lab_2#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.23.2"
+  }
 }
