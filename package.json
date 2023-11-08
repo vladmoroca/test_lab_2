@@ -1,0 +1,21 @@
+{
+  "name": "test_lab_2",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vladmoroca/test_lab_2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vladmoroca/test_lab_2/issues"
+  },
+  "homepage": "https://github.com/vladmoroca/test_lab_2#readme"
+}
