@@ -8,7 +8,7 @@ describe('CalculatorState', () => {
     });
   
     it('should initialize with default values', () => {
-      expect(calculator.screen).toBe(0);
+      expect(calculator.screen).toBe("");
       expect(calculator.first_number).toBeNull();
       expect(calculator.op).toBeNull();
       expect(calculator.start_new_number).toBe(true);

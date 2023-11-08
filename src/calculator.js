@@ -1,7 +1,7 @@
 
 export class CalculatorState {
     constructor() {
-        this.screen = 0;
+        this.screen = "";
         this.first_number = null;
         this.op = null;
         this.start_new_number = true;
