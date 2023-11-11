@@ -9,14 +9,16 @@ export class CalculatorState {
     }
 
     operations = {
-        "+": (a, b) => +a + +b,
-        "-": (a, b) => +a - +b,
-        "*": (a, b) => +a * +b,
-        "/": (a, b) => +a / +b,
+        "+": (a, b) => Math.floor(+a + +b),
+        "-": (a, b) =>  Math.floor(+a - +b),
+        "*": (a, b) =>  Math.floor(+a * +b),
+        "/": (a, b) =>  Math.floor(+a / +b),
     };
 
     calculate(){
-        this.screen = this.operations[this.op](this.screen, this.first_number)
+        if(this.op){
+            this.screen = this.operations[this.op](this.screen, this.first_number)
+        }
         return this.screen
     }
 }
@@ -26,11 +28,11 @@ export const HandleKeyPress = (calc, key) => {
         calc.screen += key
         calc.start_new_number = false
     }
-    if (key >= "+" && key <= "/"){
+    if (calc.operations[key]){
         calc.op = key
         calc.start_new_number = true
         calc.first_number = +calc.screen
-        calc.screen = 0
+        calc.screen = ""
     }
     if(key === "="){
        calc.calculate()
