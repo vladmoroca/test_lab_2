@@ -1,7 +1,7 @@
 
 export class CalculatorState {
     constructor() {
-        this.screen = "";
+        this.screen = 0;
         this.first_number = null;
         this.op = null;
         this.start_new_number = true;
@@ -25,6 +25,7 @@ export class CalculatorState {
 
 export const HandleKeyPress = (calc, key) => {
     if (key >= "0" && key <= "9"){
+        if(calc.start_new_number) calc.screen = ""
         calc.screen += key
         calc.start_new_number = false
     }

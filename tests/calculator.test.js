@@ -8,7 +8,7 @@ describe('CalculatorState', () => {
     });
   
     it('should initialize with default values', () => {
-      expect(calculator.screen).toBe("");
+      expect(calculator.screen).toBe(0);
       expect(calculator.first_number).toBeNull();
       expect(calculator.op).toBeNull();
       expect(calculator.start_new_number).toBe(true);
@@ -84,7 +84,7 @@ describe('HandleKeyPress', () => {
   
       expect(calculator.op).toBe('+');
       expect(calculator.first_number).toBe(5);
-      expect(calculator.screen).toBe(0);
+      expect(calculator.screen).toBe("");
       expect(calculator.start_new_number).toBe(true);
     });
   
